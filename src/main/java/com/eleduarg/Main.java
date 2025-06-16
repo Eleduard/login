@@ -7,8 +7,9 @@ public class Main {
         Login login = new Login();
         login.setNombre("eleduarg");
         login.setPassword("1234");
+        login.setAuthType("password");
 
-        AuthStrategy metodo = AuthFactory.getAuthMethod("password");
+        AuthStrategy metodo = AuthFactory.getAuthMethod(login.getAuthType());
         metodo.autenticar(login.getNombre(), login.getPassword());
     }
 }
