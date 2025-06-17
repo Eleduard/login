@@ -5,6 +5,7 @@ public class UserSession {
     private static UserSession sesion;
     private String usuarioActual;
 
+    //implementación del patrón singleton
     private UserSession() {}
 
     public static UserSession getSesion() {
